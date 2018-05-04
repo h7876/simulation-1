@@ -5,14 +5,16 @@ export default class Dashboard extends Component {
 
 
 render(props){
-    let item =this.props.inventory;
-    console.log(this.props.inventory);
-    let inventoryDisplay = item.map((item, index) => {
-        <div key = {item + index}> <Product item = {this.props.inventory}/></div>
-        return inventoryDisplay
+  console.log(this.props.inventory)
+    let inventoryDisplay = this.props.inventory.map(item => {
+        <div key = {item}> <Product item = {inventoryDisplay}/></div>
+        
+        return inventoryDisplay;
+       
     }
 
 )
+console.log(inventoryDisplay)
     return(
         
         <div>
